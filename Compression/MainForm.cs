@@ -15,12 +15,16 @@ namespace Compression
             InitializeComponent();
         }
 
-        //Allows the user to select files on their compujter to be added to the FileCollection
+        //Allows the user to select files on their computer to be added to the FileCollection
         private void btnAddFile_Click(object sender, EventArgs e)
         {
             selectFileDialog.ShowDialog();
-            if (!(selectFileDialog.FileName.Equals("")))
-                fList.addFile(selectFileDialog.FileName);
+            string[] selFiles = selectFileDialog.FileNames;
+
+            foreach (string s in selFiles)
+                if (!s.Equals(""))
+                    fList.addFile(s);
+
             populateListBox();
         }
 

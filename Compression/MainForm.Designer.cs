@@ -72,7 +72,7 @@
             this.txtDirName.Name = "txtDirName";
             this.txtDirName.Size = new System.Drawing.Size(102, 20);
             this.txtDirName.TabIndex = 3;
-            this.txtDirName.Text = "JCVCompression";
+            this.txtDirName.Text = "ZipName";
             this.txtDirName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnExtract
@@ -84,6 +84,10 @@
             this.btnExtract.Text = "Extract";
             this.btnExtract.UseVisualStyleBackColor = true;
             this.btnExtract.Click += new System.EventHandler(this.btnExtract_Click);
+            // 
+            // selectFileDialog
+            // 
+            this.selectFileDialog.Multiselect = true;
             // 
             // selectZipDialog
             // 
@@ -100,7 +104,7 @@
             this.Controls.Add(this.btnAddFile);
             this.Controls.Add(this.lstFiles);
             this.Name = "MainForm";
-            this.Text = "JCVCompression";
+            this.Text = "Zip Creator";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
